@@ -1,0 +1,25 @@
+[project]
+name = "ridge-regression-and-noisy-predictors"
+version = "0.2.0"
+description = "Figures for the post: Adding Noise to Regression Predictors is Ridge Regression."
+readme = "README.md"
+authors = [
+    { name = "Matthew Drury", email = "matthew.drury.83@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+]
+
+[tool.ruff]
+line-length = 88
+
+# Formatting is done by hand (see ~/.claude/CLAUDE.md); don't run `ruff format`,
+# it would undo the operator spacing conventions.
+[tool.ruff.lint]
+preview = true
+extend-select = ["E2", "W"]
+ignore = [
+    "E226",  # Arithmetic spacing shows precedence: 2*x + 1.
+]
